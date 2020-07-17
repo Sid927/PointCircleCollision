@@ -18,6 +18,8 @@ function setup() {
   console.log(window.innerWidth + ' ' + window.innerHeight);
 }
 
+window.addEventListener("resize", setup());
+
 function draw() {
   hit = false;
   background(255);

@@ -14,7 +14,7 @@ const checkCollisionPointCircle = (px, py, pr, cx, cy, cr) => {
 }
 
 function setup() {
-  createCanvas(750, 750);
+  createCanvas(window.innerHeight, window.innerWidth);
 }
 
 function draw() {

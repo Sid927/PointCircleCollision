@@ -26,6 +26,6 @@ function draw() {
   circle(cx, cy, cr * 2);
   point(mouseX, mouseY);
   hit = checkCollisionPointCircle(mouseX, mouseY, pr, cx, cy, cr);
-  stroke( (hit) ? color("red"): 0);
+  stroke( (hit) ? color("green"): 0);
   console.log('Colliding: ' + hit)
 }

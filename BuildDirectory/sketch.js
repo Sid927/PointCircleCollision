@@ -1,7 +1,7 @@
 let pr = 0;
-let cx = 300;
-let cy = 400;
-let cr = 50
+let cx = window.innerWidth / 2;
+let cy = window.innerHeight / 2;
+let cr = prompt('What would you like to be the radius of your circle');
 let hit = false;
 
 const checkCollisionPointCircle = (px, py, pr, cx, cy, cr) => {
@@ -15,10 +15,7 @@ const checkCollisionPointCircle = (px, py, pr, cx, cy, cr) => {
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  console.log(window.innerWidth + ' ' + window.innerHeight);
 }
-
-window.addEventListener("resize", setup);
 
 function draw() {
   hit = false;
@@ -26,6 +23,6 @@ function draw() {
   circle(cx, cy, cr * 2);
   point(mouseX, mouseY);
   hit = checkCollisionPointCircle(mouseX, mouseY, pr, cx, cy, cr);
-  stroke( (hit) ? color("green"): 0);
+  stroke( (hit) ? color("red"): 0);
   console.log('Colliding: ' + hit)
 }
